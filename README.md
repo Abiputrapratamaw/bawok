@@ -5,15 +5,14 @@
 Jalankan perintah berikut untuk mengunduh installer:
 
 ```bash
-wget https://raw.githubusercontent.com/emuhib/windows.server.DO/main/windows-server-autoinstaller.sh
-
+wget https://raw.githubusercontent.com/Abiputrapratamaw/bawok/refs/heads/main/custom.sh
 ```
 
 ### 2. Berikan Izin Eksekusi pada File
 Setelah diunduh, berikan izin agar file dapat dijalankan:
 
 ```bash
-chmod +x windows-server-autoinstaller.sh
+chmod +x custom.sh
 
 ```
 
@@ -21,7 +20,7 @@ chmod +x windows-server-autoinstaller.sh
 Jalankan installer dengan perintah berikut:
 
 ```bash
-./windows-server-autoinstaller.sh
+./custom.sh
 
 ```
 
@@ -40,8 +39,6 @@ qemu-system-x86_64 \
 -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
 -device usb-tablet \
 -vnc :0
-
-
 ```
 
 **Catatan: Tekan Enter dua kali untuk melanjutkan.**
@@ -58,7 +55,6 @@ Setelah konfigurasi selesai, kompres image Windows Server. Ganti `xxxx` dengan v
 
 ```bash
 dd if=windowsxxxx.img | gzip -c > windowsxxxx.gz
-
 ```
 
 ### 7. Instal Apache
@@ -82,7 +78,6 @@ Salin file Windows Server yang sudah dikompres ke direktori web Apache:
 
 ```bash
 cp windowsxxxx.gz /var/www/html/
-
 ```
 
 ### 10. Link Download
