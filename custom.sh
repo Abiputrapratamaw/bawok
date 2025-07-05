@@ -13,7 +13,7 @@ display_menu() {
 }
 
 # Update package repositories and upgrade existing packages
-apt-get update && apt-get upgrade -y
+apt-get update
 
 # Install QEMU and its utilities
 apt-get install qemu -y
